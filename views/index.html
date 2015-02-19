@@ -66,9 +66,8 @@
     </ul>
   </div>
     <script>
-      // TODO: Better Styling
-      // TODO: Render URLs onblur for each form element (hint: use directive)
-      // TODO: Put the style tag in the right place
+      // TODO: Complete Styling (that's better than how Bryce would do it. No, it's not better yet)
+      // TODO: Use it to build the email this week
       angular.module('myApp', [])
       .controller('MyController', ['$scope', function($scope) {
           $scope.result_graph;
@@ -93,6 +92,9 @@
           };
 
         $scope.displayUrl = function() {
+          //if(!$scope.content || !$scope.url || !$scope.campaign) {
+          //  return false;
+          //}
 
           $scope.url;
           $scope.result_graph = [];
@@ -108,20 +110,6 @@
           }
         };
        }])
-      // .directive('displayUrls', function() {
-      //   return {
-      //     link: function(scope, ele, attrs){
-      //       ele.bind('blur', function() {
-      //         var currentValue = ele.val();
-      //         if (scope.value !== currentValue) {
-      //         scope.displayUrl();
-      //         scope.$apply();
-      //         };
-      //       });
-      //     }
-      //   };
-      // });
     </script>
-
   </body>
 </html>
